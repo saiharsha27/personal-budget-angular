@@ -183,7 +183,7 @@
         }
 
         function getBudget() {
-            axios.get('/budget')
+            axios.get('http://localhost:3000/budget')
             .then(function (res) {
                 for (var i = 0; i < res.data.myBudget.length; i++) {
                     dataSource.datasets[0].data[i] = res.data.myBudget[i].budget;
@@ -295,7 +295,7 @@
         }
 
         function loadD3Data() {
-            axios.get('/budget')
+            axios.get('http://localhost:3000//budget')
             .then(function(response) {
                 var d3Data = response.data.myBudget.map(function(item) {
                     return { label: item.title, value: item.budget };
